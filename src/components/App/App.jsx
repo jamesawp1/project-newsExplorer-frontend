@@ -12,8 +12,10 @@ function App() {
   return (
     <>
       <div className="page">
-        <Header/>
-        <Main/>
+        <div className="page__wrapper">
+          <Header/>
+          <Main/>
+        </div>
         <Footer/>
       </div>
     </>
