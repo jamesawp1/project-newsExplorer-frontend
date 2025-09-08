@@ -1,0 +1,33 @@
+.about {
+  width: 100%;
+  max-width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  margin: 80px auto;
+  gap: 56px;
+}
+
+.about__image {
+  border-radius: 250px;
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #000;
+}
+
+.about__title {
+  font-family: "Roboto Slab";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+}
+
+.about__paragraph {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}

@@ -5,6 +5,7 @@ import './App.css'
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
+import About from "../About/About";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
           <Header/>
           <Main/>
         </div>
+        <About/>
         <Footer/>
       </div>
     </>
