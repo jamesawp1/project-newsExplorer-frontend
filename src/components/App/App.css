@@ -34,3 +34,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.div {
+  height: 1px;
+}

@@ -16,6 +16,7 @@ function App() {
         </div>
         <About/>
         <Footer/>
+        <div className="div"/>
       </div>
     </>
   )

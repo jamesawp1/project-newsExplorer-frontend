@@ -7,7 +7,10 @@ export default function Footer() {
       <p className="footer__copyright">&copy; 2025 James Jr.</p>
       <div className="footer__wrapper">
         <a href="#" className="footer__link">
-          <p className="footer__home">Início</p>
+          <p className="footer__text">Início</p>
+        </a>
+        <a href="#" className="footer__link">
+          <p className="footer__text">Tripleten</p>
         </a>
         <ul className="footer__list">
           <li className="footer__list-item">
