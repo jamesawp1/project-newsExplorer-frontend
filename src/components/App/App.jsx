@@ -5,14 +5,14 @@ import Main from "../Main/Main";
 import About from "../About/About";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [news, setNews] = useState(null)
 
   return (
     <>
       <div className="page">
         <div className="page__wrapper">
           <Header/>
-          <Main/>
+          <Main news={news}/>
         </div>
         <About/>
         <Footer/>
