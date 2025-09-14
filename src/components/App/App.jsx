@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import Main from "../Main/Main";
-import About from "../About/About";
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
+import Main from '../Main/Main'
+import About from '../About/About'
+import NewsCardList from '../NewsCardList/NewsCardList'
 
 function App() {
   const [news, setNews] = useState(null)
@@ -11,12 +12,13 @@ function App() {
     <>
       <div className="page">
         <div className="page__wrapper">
-          <Header/>
-          <Main news={news}/>
+          <Header />
+          <Main />
         </div>
-        <About/>
-        <Footer/>
-        <div className="div"/>
+        <NewsCardList />
+        <About />
+        <Footer />
+        <div className="div" />
       </div>
     </>
   )
