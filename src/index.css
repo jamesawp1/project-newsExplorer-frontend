@@ -8,3 +8,4 @@
 @import url(./components/About/About.css);
 @import url(./components/Preloader/Preloader.css);
 @import url(./components/NewsCardList/NewsCardList.css);
+@import url(./components/NewsCardList/NewsCard/NewsCard.css);
