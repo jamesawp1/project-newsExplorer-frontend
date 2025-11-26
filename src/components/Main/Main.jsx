@@ -1,6 +1,7 @@
-import SearchForm from './SearchForm/SearchForm'
+import SearchForm from "./SearchForm/SearchForm";
 
-export default function Main() {
+export default function Main(props) {
+  const { onNews } = props;
   return (
     <main className="main">
       <section className="converter">
@@ -12,8 +13,8 @@ export default function Main() {
           Encontre as últimas notícias sobre qualquer tema e salve elas em sua
           conta pessoal
         </p>
-        <SearchForm />
+        <SearchForm onNews={onNews} />
       </section>
     </main>
-  )
+  );
 }
