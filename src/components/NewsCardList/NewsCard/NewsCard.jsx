@@ -1,23 +1,16 @@
 import image from "../../../images/image_05.png";
 
-export default function NewsCard() {
+export default function NewsCard(props) {
+  const { data } = props;
+
   return (
     <li className="news__card">
-      <img className="news__card-image" src={image} />
+      <img className="news__card-image" src={data.urlToImage} />
       <div className="news__card-wrapper_text">
-        <p className="news__card-text_data">19 de outubro de 2020</p>
-        <h3 className="news__card-text_title">
-          Fotos nostálgicas de turistas no parques nacionais dos EUA
-        </h3>
-        <p className="news__card-text_paragraph">
-          Uri Løvevild Golman e Helle Løvevild Golman são exploradores da
-          National Geographic e fotógrafos de conservação que acabaram de
-          concluir um projeto e livro que consideram uma... Uri Løvevild Golman
-          e Helle Løvevild Golman são exploradores da National Geographic e
-          fotógrafos de conservação que acabaram de concluir um projeto e livro
-          que consideram uma...
-        </p>
-        <p className="news__card-text_source">national geographic</p>
+        <p className="news__card-text_data">{data.publishedAt}</p>
+        <h3 className="news__card-text_title">{data.title}</h3>
+        <p className="news__card-text_paragraph">{data.description}</p>
+        <p className="news__card-text_source">{data.source.name}</p>
       </div>
     </li>
   );

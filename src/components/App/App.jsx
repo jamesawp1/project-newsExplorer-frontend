@@ -12,7 +12,7 @@ function App() {
   const handleGetNews = (param) => {
     (async () => {
       await thirdPartyAPi.getNews(param).then((newData) => {
-        console.log(newData);
+        setNews(newData.articles);
       });
     })();
   };
@@ -24,7 +24,7 @@ function App() {
           <Header />
           <Main onNews={handleGetNews} />
         </div>
-        <NewsCardList />
+        <NewsCardList news={news} />
         <About />
         <Footer />
         <div className="div" />
