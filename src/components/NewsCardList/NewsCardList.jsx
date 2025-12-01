@@ -1,9 +1,16 @@
 import NewsCard from "./NewsCard/NewsCard";
 import Preloader from "../Preloader/Preloader";
 import NotFound from "../NotFound/NotFound";
+import { useState } from "react";
 
 export default function NewsCardList(props) {
   const { news, isLoading, isSearched } = props;
+  const [newsCount, setNewsCount] = useState(3);
+
+  const handleShowMore = () => {
+    setNewsCount((prev) => prev + 3);
+  };
+
   const notFoundMessage = [
     "Nada encontrado",
     "Desculpe, mas nada corresponde aos seus termos de pesquisa.",
@@ -19,11 +26,15 @@ export default function NewsCardList(props) {
           <div className="news__wrapper">
             <h2 className="news__title">Procurar resultados</h2>
             <ul className="news__gallery">
-              {news.slice(0, 3).map((item, index) => {
+              {news.slice(0, newsCount).map((item, index) => {
                 return <NewsCard key={index} data={item} />;
               })}
             </ul>
-            <button className="news__button">Mostrar mais</button>
+            {newsCount < news.length && (
+              <button className="news__button" onClick={handleShowMore}>
+                Mostrar mais
+              </button>
+            )}
           </div>
         </section>
       )}
