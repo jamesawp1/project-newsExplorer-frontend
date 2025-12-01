@@ -1,12 +1,13 @@
 import NewsCard from "./NewsCard/NewsCard";
 import Preloader from "../Preloader/Preloader";
+import NotFound from "../NotFound/NotFound";
 
 export default function NewsCardList(props) {
   const { news, isLoading, isSearched } = props;
 
   return (
     <>
-      {news && !isLoading && isSearched && (
+      {!isLoading && isSearched && news.length > 0 && (
         <section className="news">
           <div className="news__wrapper">
             <h2 className="news__title">Procurar resultados</h2>
@@ -20,7 +21,9 @@ export default function NewsCardList(props) {
         </section>
       )}
 
-      {<Preloader />}
+      {!isLoading && isSearched && news.length === 0 && <NotFound />}
+
+      {isLoading && <Preloader />}
     </>
   );
 }
