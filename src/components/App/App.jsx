@@ -7,7 +7,7 @@ import NewsCardList from "../NewsCardList/NewsCardList";
 import { thirdPartyAPi } from "../../utils/ThirdPartyAPi";
 
 function App() {
-  const [news, setNews] = useState(null);
+  const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isSearched, setIsSearched] = useState(false);
 
@@ -20,6 +20,9 @@ function App() {
           setNews(newData.articles);
           setIsSearched(true);
           console.log(news);
+        })
+        .catch(() => {
+          setIsSearched(false);
         })
         .finally(() => {
           setIsLoading(false);

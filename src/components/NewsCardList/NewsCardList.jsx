@@ -4,7 +4,14 @@ import NotFound from "../NotFound/NotFound";
 
 export default function NewsCardList(props) {
   const { news, isLoading, isSearched } = props;
-
+  const notFoundMessage = [
+    "Nada encontrado",
+    "Desculpe, mas nada corresponde aos seus termos de pesquisa.",
+  ];
+  const requestErrorMessage = [
+    "Erro de solicitação",
+    "Desculpe, algo deu errado durante a solicitação. Pode haver um problema de conexão ou o servidor pode estar inativo. Por favor, tente novamente mais tarde.",
+  ];
   return (
     <>
       {!isLoading && isSearched && news.length > 0 && (
@@ -21,7 +28,15 @@ export default function NewsCardList(props) {
         </section>
       )}
 
-      {!isLoading && isSearched && news.length === 0 && <NotFound />}
+      {!isLoading && isSearched && news.length === 0 && (
+        <NotFound title={notFoundMessage[0]} desc={notFoundMessage[1]} />
+      )}
+      {!isLoading && !isSearched && news.length === 0 && (
+        <NotFound
+          title={requestErrorMessage[0]}
+          desc={requestErrorMessage[1]}
+        />
+      )}
 
       {isLoading && <Preloader />}
     </>
