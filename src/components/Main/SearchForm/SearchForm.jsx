@@ -9,19 +9,26 @@ export default function SearchForm(props) {
     setKeyword(value);
   };
 
-  const handleSubmit = () => {
-    onNews(keyword);
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+
+    if (keyword.length >= 2) {
+      onNews(keyword);
+    }
   };
   return (
-    <div className="search-form">
+    <form className="search-form" onSubmit={handleSubmit}>
       <input
         className="search-form__input"
         placeholder="Inserir tema"
+        type="text"
+        minLength="2"
         onChange={handleChange}
+        required
       />
-      <button className="search-form__button" onClick={handleSubmit}>
+      <button className="search-form__button" type="submit">
         Procurar
       </button>
-    </div>
+    </form>
   );
 }
