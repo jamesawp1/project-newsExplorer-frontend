@@ -1,4 +1,4 @@
-import saveIcon from "../../../images/save-icon_disable.png";
+import saveIcon from "../../../images/save-icon.png";
 
 export default function NewsCard(props) {
   const { data } = props;
@@ -11,9 +11,12 @@ export default function NewsCard(props) {
 
   return (
     <li className="news__card">
-      <button className="news__card-button">
-        <img className="news__card-button_icon" />
+      <button className="news__card-button" aria-describedby="signinTooltip">
+        <img className="news__card-button_icon" src={saveIcon} />
       </button>
+      <div className="news__card-msg" role="signinTooltip">
+        <p className="news__card-msg_txt">Sign in to save articles</p>
+      </div>
       <img className="news__card-image" src={data.urlToImage} />
       <div className="news__card-wrapper_text">
         <p className="news__card-text_data">{date}</p>
