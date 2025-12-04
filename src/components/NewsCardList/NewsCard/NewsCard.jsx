@@ -1,4 +1,4 @@
-import image from "../../../images/image_05.png";
+import saveIcon from "../../../images/save-icon_disable.png";
 
 export default function NewsCard(props) {
   const { data } = props;
@@ -11,6 +11,9 @@ export default function NewsCard(props) {
 
   return (
     <li className="news__card">
+      <button className="news__card-button">
+        <img className="news__card-button_icon" />
+      </button>
       <img className="news__card-image" src={data.urlToImage} />
       <div className="news__card-wrapper_text">
         <p className="news__card-text_data">{date}</p>
