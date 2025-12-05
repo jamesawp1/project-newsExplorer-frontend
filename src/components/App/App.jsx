@@ -19,7 +19,6 @@ function App() {
         .then((newData) => {
           setNews(newData.articles);
           setIsSearched(true);
-          console.log(news);
         })
         .catch(() => {
           setIsSearched(false);

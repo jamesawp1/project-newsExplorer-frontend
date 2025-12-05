@@ -26,4 +26,11 @@
   line-height: 24px;
   font-weight: 400;
   color: #b6bcbf;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .notFound {
+    padding: 46px 0 40px;
+  }
 }

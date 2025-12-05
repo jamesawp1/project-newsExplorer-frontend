@@ -2,7 +2,7 @@ import saveIcon from "../../../images/save-icon.png";
 
 export default function NewsCard(props) {
   const { data } = props;
-  console.log(data);
+
   const date = new Date(data.publishedAt).toLocaleDateString("pt-BR", {
     day: "2-digit",
     month: "long",

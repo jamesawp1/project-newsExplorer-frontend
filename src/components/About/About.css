@@ -9,6 +9,7 @@
 
 .about__image {
   border-radius: 250px;
+  max-height: 460px;
 }
 
 .about__wrapper {
@@ -30,4 +31,41 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about__image {
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 948px) {
+  .about__image {
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+  .about__wrapper {
+    gap: 16px;
+  }
+
+  .about {
+    gap: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    margin: 40px auto;
+  }
+  .about__image {
+    max-width: 232px;
+    max-height: 232px;
+  }
+
+  .about__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

@@ -27,7 +27,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 
 .header__item:last-child {
@@ -46,4 +46,10 @@
 .header__item:last-child:hover {
   cursor: default;
   opacity: 0.4;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin: 14px auto;
+  }
 }
