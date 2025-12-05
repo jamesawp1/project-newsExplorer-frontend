@@ -36,7 +36,7 @@
 
 .news__button {
   max-width: 288px;
-  background-color: #e8e8e8;
+  background-color: #fff;
   border: none;
   font-family: "Roboto";
   font-weight: 500;
@@ -47,4 +47,8 @@
   color: #000;
   cursor: pointer;
   outline: none;
+}
+
+.news__button:hover {
+  background-color: #e8e8e8;
 }
