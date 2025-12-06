@@ -32,10 +32,8 @@ function App() {
   return (
     <>
       <div className="page">
-        <div className="page__wrapper">
-          <Header />
-          <Main onNews={handleGetNews} />
-        </div>
+        <Header />
+        <Main onNews={handleGetNews} />
         <NewsCardList
           news={news}
           isLoading={isLoading}

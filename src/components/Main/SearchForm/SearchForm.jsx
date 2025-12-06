@@ -17,16 +17,16 @@ export default function SearchForm(props) {
     }
   };
   return (
-    <form className="search-form" onSubmit={handleSubmit}>
+    <form className="header__searchForm" onSubmit={handleSubmit}>
       <input
-        className="search-form__input"
+        className="header__searchForm_input"
         placeholder="Inserir tema"
         type="text"
         minLength="2"
         onChange={handleChange}
         required
       />
-      <button className="search-form__button" type="submit">
+      <button className="header__searchForm_button" type="submit">
         Procurar
       </button>
     </form>
