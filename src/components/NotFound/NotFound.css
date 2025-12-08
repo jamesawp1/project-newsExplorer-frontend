@@ -31,6 +31,20 @@
 
 @media screen and (max-width: 768px) {
   .notFound {
-    padding: 46px 0 40px;
+    padding: 46px 40px 40px;
+  }
+
+  .notFound__title {
+    margin: 21.5px 0 11px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .notFound {
+    padding: 26px 16px 20px;
+  }
+
+  .notFound__title {
+    margin: 16.5px 0 8px;
   }
 }
