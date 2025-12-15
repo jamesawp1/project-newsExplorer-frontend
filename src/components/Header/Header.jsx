@@ -1,7 +1,8 @@
 import Navigation from "../Header/Navigation/Navigation";
-import SearchForm from "../Main/SearchForm/SearchForm";
+import SearchForm from "../Header/SearchForm/SearchForm";
 
-export default function Header() {
+export default function Header(props) {
+  const { onNews } = props;
   return (
     <header className="header">
       <Navigation />
@@ -11,7 +12,7 @@ export default function Header() {
           Encontre as últimas notícias sobre qualquer tema e salve elas em sua
           conta pessoal
         </p>
-        <SearchForm /*onNews={onNews}*/ />
+        <SearchForm onNews={onNews} />
       </div>
     </header>
   );

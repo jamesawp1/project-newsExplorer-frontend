@@ -3,13 +3,13 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
 import About from "../About/About";
-import NewsCardList from "../NewsCardList/NewsCardList";
 import { thirdPartyAPi } from "../../utils/ThirdPartyAPi";
 
 function App() {
   const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isSearched, setIsSearched] = useState(false);
+  const [isCatchError, setIsCatchError] = useState(false);
 
   const handleGetNews = (param) => {
     setIsLoading(true);
@@ -19,9 +19,10 @@ function App() {
         .then((newData) => {
           setNews(newData.articles);
           setIsSearched(true);
+          setIsCatchError(false);
         })
         .catch(() => {
-          setIsSearched(false);
+          setIsCatchError(true);
         })
         .finally(() => {
           setIsLoading(false);
@@ -32,12 +33,12 @@ function App() {
   return (
     <>
       <div className="page">
-        <Header />
-        <Main onNews={handleGetNews} />
-        <NewsCardList
+        <Header onNews={handleGetNews} />
+        <Main
           news={news}
           isLoading={isLoading}
           isSearched={isSearched}
+          isCatchError={isCatchError}
         />
         <About />
         <Footer />

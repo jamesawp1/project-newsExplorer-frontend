@@ -4,7 +4,7 @@ import NotFound from "../NotFound/NotFound";
 import { useState } from "react";
 
 export default function NewsCardList(props) {
-  const { news, isLoading, isSearched } = props;
+  const { news, isLoading, isSearched, isCatchError } = props;
   const [newsCount, setNewsCount] = useState(3);
 
   const handleShowMore = () => {
@@ -42,7 +42,7 @@ export default function NewsCardList(props) {
       {!isLoading && isSearched && news.length === 0 && (
         <NotFound title={notFoundMessage[0]} desc={notFoundMessage[1]} />
       )}
-      {!isLoading && !isSearched && news.length === 0 && (
+      {!isLoading && isCatchError && (
         <NotFound
           title={requestErrorMessage[0]}
           desc={requestErrorMessage[1]}
