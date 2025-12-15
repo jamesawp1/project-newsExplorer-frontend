@@ -10,7 +10,11 @@ export default function Footer() {
           <a href="#" className="footer__links_item">
             <p className="footer__links_item-text">Início</p>
           </a>
-          <a href="#" className="footer__links_item">
+          <a
+            href="https://tripleten.com"
+            className="footer__links_item"
+            target="_blank"
+          >
             <p className="footer__links_item-text">Tripleten</p>
           </a>
         </div>

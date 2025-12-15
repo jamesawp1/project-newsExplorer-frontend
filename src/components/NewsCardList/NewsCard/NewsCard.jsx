@@ -12,7 +12,11 @@ export default function NewsCard(props) {
   return (
     <li className="news__card">
       <button className="news__card-button" aria-describedby="signinTooltip">
-        <img className="news__card-button_icon" src={saveIcon} />
+        <img
+          className="news__card-button_icon"
+          alt="Imagem do artigo."
+          src={saveIcon}
+        />
       </button>
       <div className="news__card-msg" role="signinTooltip">
         <p className="news__card-msg_txt">Sign in to save articles</p>

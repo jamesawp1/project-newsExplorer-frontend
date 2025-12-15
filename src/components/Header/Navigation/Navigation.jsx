@@ -10,6 +10,9 @@ export default function Navigation() {
     : "header__navigation_wrapper";
 
   const hamburguerToggle = menuActivated ? closeHamburguer : hamburguer;
+  const homeButtonToggle = menuActivated
+    ? "header__navigation_button"
+    : "header__navigation_button-home";
   const handleActiveButton = () => {
     if (!menuActivated) {
       setMenuActivated(true);
@@ -33,7 +36,8 @@ export default function Navigation() {
       {menuActivated && <div className="overlay" />}
 
       <div className={menuOpenSelector}>
-        <button className="header__navigation_button">Início</button>
+        <button className={homeButtonToggle}>Início</button>
+
         <button
           className="header__navigation_button header__navigation_button-outline"
           disabled
