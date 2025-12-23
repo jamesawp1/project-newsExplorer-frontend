@@ -38,10 +38,7 @@ export default function Navigation() {
       <div className={menuOpenSelector}>
         <button className={homeButtonToggle}>Início</button>
 
-        <button
-          className="header__navigation_button header__navigation_button-outline"
-          disabled
-        >
+        <button className="header__navigation_button header__navigation_button-outline">
           Entrar
         </button>
       </div>

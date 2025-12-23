@@ -1,5 +1,6 @@
 import Navigation from "../Header/Navigation/Navigation";
 import SearchForm from "../Header/SearchForm/SearchForm";
+import Popup from "../Popup/Popup";
 
 export default function Header(props) {
   const { onNews } = props;
@@ -13,6 +14,8 @@ export default function Header(props) {
           conta pessoal
         </p>
         <SearchForm onNews={onNews} />
+
+        <Popup />
       </div>
     </header>
   );

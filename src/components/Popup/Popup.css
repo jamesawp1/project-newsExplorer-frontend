@@ -1,0 +1,154 @@
+.popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+
+.popup__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  height: 380px;
+  background-color: #fff;
+  padding: 34px 36px 28px;
+  gap: 16px;
+  border-radius: 15px;
+}
+
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+.popup__title {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 100%;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.popup__label {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #2f71e5;
+  gap: 9px;
+}
+
+.popup__input {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #000;
+  width: 358px;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding-bottom: 11px;
+  outline: none;
+}
+
+.popup__button {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  width: 358px;
+  height: 64px;
+  background-color: #e6e8eb;
+  color: #b6bcbf;
+  padding: 0 114px;
+  border: none;
+  border-radius: 114px;
+  margin-top: 8px;
+}
+
+.popup__subtitle {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #4983e8;
+  text-align: center;
+}
+
+.popup__subtitle_span {
+  color: #000;
+}
+
+.popup__close-button {
+  position: absolute;
+  background-color: transparent;
+  top: -45px;
+  right: -45px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 520px) {
+  .popup__close-button {
+    right: 10px;
+    top: -40px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .popup__container {
+    width: 320px;
+    height: auto;
+    padding: 16px 16px 10px;
+  }
+
+  .popup__form {
+    gap: 23px;
+  }
+
+  .popup__title {
+    margin: 0 0 2px 1px;
+  }
+
+  .popup__label {
+    gap: 8px;
+  }
+
+  .popup__label:first-child {
+    margin-bottom: 7px;
+  }
+
+  .popup__input {
+    width: 288px;
+  }
+
+  .popup__button {
+    width: 288px;
+  }
+
+  .popup__close-button-img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__container {
+    width: 100vw;
+    height: 100vh;
+    padding: 16px 16px 10px;
+    margin-top: 112px;
+  }
+}
