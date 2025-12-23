@@ -10,6 +10,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSearched, setIsSearched] = useState(false);
   const [isCatchError, setIsCatchError] = useState(false);
+  const [popup, setPopup] = useState(false);
 
   const handleGetNews = (param) => {
     setIsLoading(true);
@@ -30,10 +31,22 @@ function App() {
     })();
   };
 
+  function handleOpenPopup() {
+    setPopup(true);
+  }
+  function handleClosePopup() {
+    setPopup(false);
+  }
+
   return (
     <>
       <div className="page">
-        <Header onNews={handleGetNews} />
+        <Header
+          onNews={handleGetNews}
+          onOpenPopup={handleOpenPopup}
+          onClosePopup={handleClosePopup}
+          popup={popup}
+        />
         <Main
           news={news}
           isLoading={isLoading}

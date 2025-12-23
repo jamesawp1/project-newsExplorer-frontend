@@ -3,10 +3,17 @@ import SearchForm from "../Header/SearchForm/SearchForm";
 import Popup from "../Popup/Popup";
 
 export default function Header(props) {
-  const { onNews } = props;
+  const { popup, onNews, onOpenPopup, onClosePopup } = props;
+
+  function handleOpenClick() {
+    onOpenPopup();
+  }
+  function handleCloseClick() {
+    onClosePopup();
+  }
   return (
     <header className="header">
-      <Navigation />
+      <Navigation onClickOpen={handleOpenClick} />
       <div className="header__wrapper">
         <h2 className="header__subtitle">O quê está acontecendo no mundo?</h2>
         <p className="header__paragraph">
@@ -15,7 +22,7 @@ export default function Header(props) {
         </p>
         <SearchForm onNews={onNews} />
 
-        <Popup />
+        {popup && <Popup onClose={handleCloseClick} popup={popup} />}
       </div>
     </header>
   );

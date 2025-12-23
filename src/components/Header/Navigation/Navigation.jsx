@@ -2,7 +2,9 @@ import { useState } from "react";
 import hamburguer from "../../../images/hamburguer.png";
 import closeHamburguer from "../../../images/close-hamburguer.png";
 
-export default function Navigation() {
+export default function Navigation(props) {
+  const { onClickOpen } = props;
+
   const [menuActivated, setMenuActivated] = useState(false);
 
   const menuOpenSelector = menuActivated
@@ -38,7 +40,10 @@ export default function Navigation() {
       <div className={menuOpenSelector}>
         <button className={homeButtonToggle}>Início</button>
 
-        <button className="header__navigation_button header__navigation_button-outline">
+        <button
+          className="header__navigation_button header__navigation_button-outline"
+          onClick={() => onClickOpen()}
+        >
           Entrar
         </button>
       </div>
