@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    // Permite variáveis começando com underscore (ex: _id)
+    "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+
+    // Permite console.log, mas avisa com warning (não erro)
+    "no-console": ["warn", { "allow": ["warn", "error", "log"] }],
+
+    // Controla estilo de quebra de linha (Windows = CRLF, Unix = LF, ou auto)
+    "linebreak-style": ["error", "unix"]  // pode trocar para "windows" se quiser CRLF
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
