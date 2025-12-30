@@ -22,7 +22,12 @@
       Ademais, há os componentes de carregamento e de exibição das notícias nos quais a funcionalidade não detem nenhum comportamento anormal com exceção da adaptabilidade às demais larguras de tela.
       Por fim, todos os componentes tem a plena capacidade de se ajustaram as mais diferentes telas, conferindo-lhes o status de aplicativo responsivo.
     </p>
+</div>
 
+<div>
+    <p>
+      Para o futuro, a implementação do sistema de login, bem como uma espécie de biblioteca pessoal de notícias, serão os próximos alvos de desenvolvimento para este projeto.
+    </p>
 </div>
 
 ##
