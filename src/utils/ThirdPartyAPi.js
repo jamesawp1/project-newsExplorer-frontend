@@ -5,9 +5,8 @@ class ThirdPartyAPi {
   }
 
   getNews(keyword) {
-    return fetch(`${this._baseUrl}/everything?q=${keyword}&pageSize=100`, {
-      headers: this._headers,
-    }).then((res) => {
+    return fetch(`${this._baseUrl}/?q=${keyword}`,
+    ).then((res) => {
       if (res.ok) {
         return res.json();
       }
@@ -17,8 +16,5 @@ class ThirdPartyAPi {
 }
 
 export const thirdPartyAPi = new ThirdPartyAPi({
-  baseUrl: "https://newsapi.org/v2",
-  headers: {
-    "X-Api-Key": "52f6a79630ec4e72805e99ae78afa694",
-  },
+  baseUrl: "https://project-news-explorer-backend.vercel.app/api/news",
 });
